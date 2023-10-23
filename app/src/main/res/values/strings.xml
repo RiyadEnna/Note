@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Note</string>
+    <string name="entrer_une_matierer">entrer une matiere\n</string>
+    <string name="entrer_une_matiere">entrer une matiere</string>
+    <string name="entrer_coef">entrer un coef</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="consulter_liste_matiere">consulter la liste des matières</string>
+</resources>

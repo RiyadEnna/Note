@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/matiere"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/entrer_une_matiere"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+         />
+
+    <EditText
+        android:id="@+id/txt_matiere_saisie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/entrer_une_matiere"
+        app:layout_constraintTop_toBottomOf="@+id/matiere"
+        />
+
+
+    <TextView
+        android:id="@+id/coef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_matiere_saisie"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/entrer_coef" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:hint="@string/entrer_coef"
+        app:layout_constraintTop_toBottomOf="@id/coef"
+
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/btn_enregistrer_matiere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/enregistrer"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+
+       />
+
+    <Button
+        android:id="@+id/btn_consulter_la_liste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/consulter_liste_matiere"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enregistrer_matiere"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

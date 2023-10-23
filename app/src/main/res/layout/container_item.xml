@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/name_matiere"
+        android:layout_width="115dp"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="matiere" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name_matiere"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_restore_from_trash_24" />
+
+    <TextView
+        android:id="@+id/coef_matiere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_matiere"
+        app:layout_goneMarginTop="4dp"
+        tools:text="coef" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
