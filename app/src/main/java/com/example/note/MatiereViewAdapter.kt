@@ -5,11 +5,18 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
-class MatiereViewAdapter(matieres: MutableList<Matiere>): Adapter<MatiereViewHolder>() {
+class MatiereViewAdapter(matieres: MutableList<Matiere>, matiereItemCallBack: MatiereItemCallBack): Adapter<MatiereViewHolder>(){
     var matieres= mutableListOf<Matiere>()
+    var matiereItemCallBack: MatiereItemCallBack
 
     init {
         this.matieres =matieres
+        this.matiereItemCallBack =matiereItemCallBack
+    }
+
+    fun setMatierList(matieres: MutableList<Matiere>){
+        this.matieres = matieres
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MatiereViewHolder {
@@ -26,6 +33,6 @@ class MatiereViewAdapter(matieres: MutableList<Matiere>): Adapter<MatiereViewHol
 
     override fun onBindViewHolder(holder: MatiereViewHolder, position: Int) {
         //fill les élements qui sont dans notre liste dans la vue en fonction de l'index
-        holder.fill(matieres.get(position))
+        holder.fill(matieres.get(position),matiereItemCallBack)
     }
 }
